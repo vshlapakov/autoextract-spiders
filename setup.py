@@ -7,4 +7,5 @@ setup(
     description='Scrapinghub AutoExtract spiders',
     packages=find_packages(exclude=['tests']),
     entry_points={'scrapy': ['settings = autoextract_spiders.settings']},
+    scripts=['bin/manager.py'],
 )
