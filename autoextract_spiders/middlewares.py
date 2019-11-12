@@ -1,5 +1,4 @@
 from fake_useragent import UserAgent
-from scrapy import signals
 from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 
 
@@ -11,7 +10,6 @@ class RandomUserAgentMiddleware(UserAgentMiddleware):
         if crawler.settings.get('FAKEUSERAGENT_ENABLED'):
             random_type = crawler.settings.get('FAKEUSERAGENT_TYPE', 'random')
         o = cls(user_agent, random_type=random_type)
-        crawler.signals.connect(o.spider_opened, signal=signals.spider_opened)
         return o
 
     def __init__(self, user_agent='Scrapy', random_type=None):
