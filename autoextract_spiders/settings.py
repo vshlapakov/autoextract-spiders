@@ -47,7 +47,7 @@ DOWNLOADER_MIDDLEWARES = {
     'scrapy_count_filter.middleware.GlobalCountFilterMiddleware': 541,
     'scrapy_count_filter.middleware.HostsCountFilterMiddleware': 542,
     'scrapy_autoextract.middlewares.AutoExtractMiddleware': 543,
-    'scrapy_fake_useragent.middleware.RandomUserAgentMiddleware': 998,
+    'autoextract_spiders.middlewares.RandomUserAgentMiddleware': 998,
 }
 
 AUTOEXTRACT_USER = '[API key]'
