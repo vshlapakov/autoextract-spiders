@@ -7,7 +7,7 @@ class RandomUserAgentMiddleware(UserAgentMiddleware):
     @classmethod
     def from_crawler(cls, crawler):
         user_agent, random_type = crawler.settings['USER_AGENT'], None
-        if crawler.settings.get('FAKEUSERAGENT_ENABLED'):
+        if crawler.settings.getbool('FAKEUSERAGENT_ENABLED'):
             random_type = crawler.settings.get('FAKEUSERAGENT_TYPE', 'random')
         o = cls(user_agent, random_type=random_type)
         return o
