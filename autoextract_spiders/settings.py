@@ -44,10 +44,10 @@ SPIDER_MIDDLEWARES = {
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
     'scrapy_crawlera.CrawleraMiddleware': 300,
+    'autoextract_spiders.middlewares.RandomUserAgentMiddleware': 500,
     'scrapy_count_filter.middleware.GlobalCountFilterMiddleware': 541,
     'scrapy_count_filter.middleware.HostsCountFilterMiddleware': 542,
     'scrapy_autoextract.middlewares.AutoExtractMiddleware': 543,
-    'autoextract_spiders.middlewares.RandomUserAgentMiddleware': 998,
 }
 
 AUTOEXTRACT_USER = '[API key]'
